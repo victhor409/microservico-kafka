@@ -1,17 +1,15 @@
 package com.portal.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.io.Serializable;
 
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonInclude
-public class CarPostDTO {
+public class CarPostDTO implements Serializable {
 
     private String model;
     private String brand;
@@ -24,5 +22,4 @@ public class CarPostDTO {
     private String ownerName;
     private String ownerType;
     private String contact;
-
 }

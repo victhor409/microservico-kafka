@@ -2,7 +2,6 @@ package com.portal.api.client;
 
 import com.portal.api.dto.CarPostDTO;
 import com.portal.api.dto.OwnerPostDTO;
-import org.hibernate.annotations.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;

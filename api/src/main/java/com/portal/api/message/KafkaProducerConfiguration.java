@@ -1,6 +1,6 @@
 package com.portal.api.message;
 
-import com.fasterxml.jackson.databind.JsonSerializer;
+
 import com.portal.api.dto.CarPostDTO;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
+import org.springframework.kafka.support.serializer.JsonSerializer;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -28,7 +29,7 @@ public class KafkaProducerConfiguration {
         Map<String , Object> configProps = new HashMap<>();
 
         configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, boostrapServer);
-        configProps.put(org.springframework.kafka.support.serializer.JsonSerializer.ADD_TYPE_INFO_HEADERS, false);
+        configProps.put(JsonSerializer.ADD_TYPE_INFO_HEADERS, false);
         configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class.getName());
 

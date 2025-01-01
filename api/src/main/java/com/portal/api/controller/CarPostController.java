@@ -1,6 +1,5 @@
 package com.portal.api.controller;
 
-import com.portal.api.client.CarPostStoreClient;
 import com.portal.api.dto.CarPostDTO;
 import com.portal.api.message.KafkaProducerMessage;
 import com.portal.api.service.CarPostStoreService;
